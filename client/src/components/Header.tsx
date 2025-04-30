@@ -44,10 +44,14 @@ export default function Header() {
   
   return (
     <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:py-6 lg:px-8 flex justify-between items-center backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 md:py-6 lg:px-8 flex justify-between items-center ${isScrolled ? 'glass-orange' : ''}`}
       style={{ 
-        backgroundColor: `rgba(255, 255, 255, ${headerBackgroundOpacity.get()})`,
-        boxShadow: headerBoxShadow 
+        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.85)' : 'rgba(255, 255, 255, 0)',
+        boxShadow: headerBoxShadow,
+        borderBottom: isScrolled ? '1px solid rgba(249, 115, 22, 0.1)' : 'none',
+        backdropFilter: `blur(${isScrolled ? '12px' : '0px'})`,
+        WebkitBackdropFilter: `blur(${isScrolled ? '12px' : '0px'})`,
+        transition: 'all 0.3s ease-in-out'
       }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
