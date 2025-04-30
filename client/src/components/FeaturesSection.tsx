@@ -37,18 +37,18 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-heading-fluid leading-tight mb-16 md:mb-24">
-          <span className="text-indigo-600">FEATURED</span> PROJECTS
+          <span className="text-orange-500">FEATURED</span> PROJECTS
         </h2>
         
         {projects.map((project, index) => (
           <div key={index} className="mb-24 md:mb-32 group">
-            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
+            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 group-hover:text-orange-500 transition-colors duration-300">{project.title}</h3>
             <p className="text-xl md:text-3xl lg:text-4xl text-gray-600 leading-relaxed mb-6">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
               {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="text-lg md:text-xl bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">
+                <span key={techIndex} className="text-lg md:text-xl bg-orange-100 text-orange-800 px-4 py-2 rounded-full">
                   {tech}
                 </span>
               ))}
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
               href={project.link} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-xl md:text-2xl text-indigo-600 font-semibold hover:text-indigo-800 transition-colors inline-flex items-center gap-2"
+              className="text-xl md:text-2xl text-orange-500 font-semibold hover:text-orange-700 transition-colors inline-flex items-center gap-2"
             >
               View Project 
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

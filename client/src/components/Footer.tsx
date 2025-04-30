@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
         
         <div className="text-lg md:text-xl lg:text-2xl text-gray-400 border-t border-gray-800 pt-8">
-          &copy; {new Date().getFullYear()} Omkar Web Development. All rights reserved.
+          &copy; {new Date().getFullYear()} CogniForge AI. All rights reserved.
         </div>
       </div>
     </footer>
