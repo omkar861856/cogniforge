@@ -115,12 +115,30 @@ export default function ProjectsSection() {
               transition={{ duration: 1, delay: 0.5 + (0.2 * index) }}
             />
             
-            <div className="pl-6">
+            <div 
+              className="pl-6 relative"
+              style={{ perspective: '1000px' }}
+            >
+              {/* 3D Perspective Effect on the project title */}
               <motion.h3 
-                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 group-hover:text-orange-500 transition-colors duration-300"
-                whileHover={{ x: 10 }}
+                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 group-hover:text-orange-500 transition-colors duration-300 relative"
+                whileHover={{ 
+                  x: 10,
+                  rotateY: 5,
+                  textShadow: "0px 10px 20px rgba(249, 115, 22, 0.2)",
+                  z: 30
+                }}
                 transition={{ type: "spring", stiffness: 300 }}
+                style={{ transformStyle: "preserve-3d" }}
               >
+                {/* Add futuristic backdrop highlight on hover */}
+                <motion.div
+                  className="absolute -inset-4 rounded-xl opacity-0 group-hover:opacity-5 bg-orange-200"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
                 {project.title}
                 <motion.span
                   className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -129,6 +147,14 @@ export default function ProjectsSection() {
                 >
                   ✨
                 </motion.span>
+                
+                {/* Futuristic underline bar */}
+                <motion.div
+                  className="absolute -bottom-2 left-0 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "50%" }}
+                  transition={{ duration: 0.3 }}
+                />
               </motion.h3>
               
               <motion.p 
