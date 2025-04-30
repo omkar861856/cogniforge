@@ -159,7 +159,7 @@ export default function Header() {
               }}
               initial={{ width: 0 }}
               animate={{ width: isScrolled ? "100%" : "30%" }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             />
             
             {/* Main underline */}
@@ -168,7 +168,7 @@ export default function Header() {
               style={{ transform: "translateZ(1px)" }}
               initial={{ width: 0 }}
               animate={{ width: isScrolled ? "100%" : "30%" }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             />
             
             {/* Highlight underline */}
@@ -179,7 +179,7 @@ export default function Header() {
               }}
               initial={{ width: 0 }}
               animate={{ width: isScrolled ? "30%" : "15%" }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             />
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function Header() {
           className="absolute -inset-2 rounded-md border border-orange-200 opacity-0"
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.15 }}
         >
           {/* Corner accents */}
           <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-orange-400"></div>
@@ -217,7 +217,7 @@ export default function Header() {
                 transformStyle: "preserve-3d", 
                 transform: `perspective(1000px) translateZ(0px) rotateX(0deg) rotateY(0deg)`,
                 transformOrigin: "center center",
-                transition: "transform 0.3s ease"
+                transition: "transform 0.2s ease"
               }}
               whileHover={{ 
                 y: -2, 
@@ -281,7 +281,7 @@ export default function Header() {
                         filter: "blur(1px)"
                       }}
                       layoutId="activeSection-shadow"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 15 }}
                     />
                     
                     {/* Main layer */}
@@ -289,7 +289,7 @@ export default function Header() {
                       className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500"
                       style={{ transform: "translateZ(0px)" }}
                       layoutId="activeSection"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 15 }}
                     />
                     
                     {/* Highlight layer */}
@@ -299,7 +299,7 @@ export default function Header() {
                         transform: "translateZ(2px) translateY(-0.5px) scale(0.9)"
                       }}
                       layoutId="activeSection-highlight"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 15 }}
                     />
                   </div>
                 )}
