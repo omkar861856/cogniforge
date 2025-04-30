@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="py-12 md:py-16 px-6 lg:px-8 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-indigo-400">OMKAR</div>
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-orange-400">COGNIFORGE AI</div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div>
