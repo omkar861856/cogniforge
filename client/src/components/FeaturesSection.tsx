@@ -8,22 +8,28 @@ interface ProjectItem {
 export default function ProjectsSection() {
   const projects: ProjectItem[] = [
     {
-      title: "AI Gym Membership Website",
-      description: "A sleek, modern website designed to attract and convert gym membership leads with AI-powered user experience.",
+      title: "Gym Membership Website",
+      description: "A sleek, modern website designed to attract and convert gym membership leads with engaging design and optimized user experience.",
       link: "https://website3.dblfarmops.shop/",
-      technologies: ["React", "TailwindCSS", "Next.js", "AI Integration"]
+      technologies: ["React", "TailwindCSS", "Next.js", "Responsive Design"]
     },
     {
       title: "Music Label Catalogue",
       description: "Portfolio website for a music label featuring their artist catalogue, releases, and upcoming events.",
-      link: "https://website3.dblfarmops.shop/",
+      link: "https://website1.dblfarmops.shop/",
       technologies: ["React", "Node.js", "Express", "MongoDB"]
     },
     {
       title: "Legal Arbitrators Platform",
       description: "Professional website for legal arbitration services with client portals and case management features.",
-      link: "#",
+      link: "https://website2.dblfarmops.shop/",
       technologies: ["Vue.js", "Firebase", "Tailwind CSS", "Authentication"]
+    },
+    {
+      title: "CogniForge AI Platform",
+      description: "Flagship product of my startup focusing on creating micro/mini SaaS solutions and specialized AI agents for business automation.",
+      link: "#",
+      technologies: ["AI/ML", "SaaS Architecture", "API Integration", "Cloud Infrastructure"]
     },
   ];
 

@@ -8,19 +8,19 @@ export default function AboutSection() {
         
         <div className="text-xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed space-y-8">
           <p>
-            I specialize in creating powerful web solutions that leverage the latest in AI technology to transform business communication and operations.
+            As the founder of <span className="font-semibold text-indigo-600">CogniForge AI</span>, I specialize in creating powerful micro/mini SaaS solutions and AI agents that transform business operations and communication.
           </p>
           
           <p>
-            With expertise in both frontend and backend development, I build complete solutions from conception to deployment, focusing on clean design and powerful functionality.
+            My startup focuses on developing specialized AI tools that automate repetitive tasks and enhance customer engagement through intelligent voice and chat agents.
           </p>
           
           <blockquote className="text-3xl md:text-4xl lg:text-5xl font-light text-indigo-900 leading-tight italic pl-6 border-l-4 border-indigo-600 mt-12 mb-12">
-            "The best websites don't just <span className="font-semibold">exist</span>, they <span className="font-semibold">communicate</span> and <span className="font-semibold">convert</span>."
+            "The best solutions don't just solve problems—they <span className="font-semibold">transform</span> how businesses <span className="font-semibold">operate</span>."
           </blockquote>
           
           <p>
-            My approach combines technical excellence with strategic thinking to help businesses achieve their goals through effective digital presence.
+            With expertise in both frontend and backend development, I build complete solutions from conception to deployment, focusing on clean design and powerful functionality that delivers real business value.
           </p>
         </div>
       </div>

@@ -12,14 +12,17 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative py-10 md:py-16 lg:py-24 px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-10 md:py-16 lg:py-24 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-indigo-50 to-white">
       <div className="max-w-7xl mx-auto">
+        <div className="mb-4 md:mb-6 text-xl md:text-2xl lg:text-3xl font-medium text-indigo-600">
+          Founder of CogniForge AI
+        </div>
         <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-mega font-black tracking-tight text-gray-900 text-size-fluid leading-tight">
           <span className="text-indigo-600">OMKAR</span> <br />
           <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">WEB DEVELOPER</span>
         </h1>
         <p className="mt-6 text-2xl md:text-4xl lg:text-5xl text-subheading-fluid text-gray-600 max-w-4xl leading-snug">
-          Transforming Business Communication with AI Voice & Chat Agents | Automation Solutions | Custom Web Development
+          Building micro/mini SaaS solutions and specialized AI agents for business automation | Custom web development
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-4">
           <Button 
