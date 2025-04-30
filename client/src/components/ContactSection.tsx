@@ -86,7 +86,7 @@ export default function ContactSection() {
     <section 
       ref={sectionRef}
       id="contact" 
-      className="relative py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white overflow-hidden"
+      className="relative py-24 md:py-32 lg:py-40 px-6 lg:px-8 bg-gradient-to-tr from-white via-orange-50 to-white overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-orange-50 opacity-50 blur-3xl"></div>

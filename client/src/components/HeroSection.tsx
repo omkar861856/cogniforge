@@ -31,7 +31,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 lg:py-36 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-orange-50 to-white min-h-[85vh] flex items-center">
+    <section ref={sectionRef} className="relative pt-32 md:pt-40 pb-20 md:pb-28 lg:pb-36 px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-orange-50 to-white min-h-[85vh] flex items-center">
       {/* AI Animation Background - Base layer */}
       <AIAnimationBackground />
       

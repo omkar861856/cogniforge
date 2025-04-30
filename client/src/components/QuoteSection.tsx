@@ -44,7 +44,7 @@ export default function AboutSection() {
     <section 
       ref={sectionRef} 
       id="about" 
-      className="relative py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-orange-50 overflow-hidden"
+      className="relative py-24 md:py-32 lg:py-40 px-6 lg:px-8 bg-gradient-to-tl from-white via-orange-50 to-white overflow-hidden"
     >
       {/* Background grid pattern */}
       <div className="absolute inset-0 ai-grid-bg opacity-70"></div>

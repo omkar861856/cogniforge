@@ -52,7 +52,7 @@ export default function ProjectsSection() {
     <section 
       ref={sectionRef} 
       id="projects" 
-      className="relative py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white overflow-hidden"
+      className="relative py-24 md:py-32 lg:py-40 px-6 lg:px-8 bg-gradient-to-bl from-white via-orange-50 to-white overflow-hidden"
     >
       {/* Tech background pattern */}
       <div className="absolute inset-0 opacity-5">
