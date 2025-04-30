@@ -9,9 +9,9 @@ export default function ScrollToTopButton() {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   
-  // Smooth spring physics for the mouse movement
-  const xSpring = useSpring(x, { stiffness: 300, damping: 20 });
-  const ySpring = useSpring(y, { stiffness: 300, damping: 20 });
+  // Smooth spring physics for the mouse movement (reduced damping for faster response)
+  const xSpring = useSpring(x, { stiffness: 400, damping: 10 });
+  const ySpring = useSpring(y, { stiffness: 400, damping: 10 });
   
   // Transform mouse position to rotation values (limit to +/- 20 degrees)
   const rotateX = useTransform(ySpring, [-100, 100], [20, -20]);
@@ -75,7 +75,7 @@ export default function ScrollToTopButton() {
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
-          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          transition={{ type: "spring", stiffness: 500, damping: 10, duration: 0.3 }}
           onClick={scrollToTop}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -125,7 +125,7 @@ export default function ScrollToTopButton() {
               ]
             }}
             transition={{ 
-              duration: 2,
+              duration: 1.2,
               repeat: Infinity,
               repeatType: "loop"
             }}

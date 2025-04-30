@@ -13,9 +13,9 @@ export default function Header() {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   
-  // Smooth spring physics for the mouse movement
-  const xSpring = useSpring(x, { stiffness: 400, damping: 25 });
-  const ySpring = useSpring(y, { stiffness: 400, damping: 25 });
+  // Smooth spring physics for the mouse movement (reduced damping for faster response)
+  const xSpring = useSpring(x, { stiffness: 500, damping: 12 });
+  const ySpring = useSpring(y, { stiffness: 500, damping: 12 });
   
   // Transform mouse position to rotation values (limit to smaller range for subtlety)
   const rotateX = useTransform(ySpring, [-100, 100], [5, -5]);
@@ -111,33 +111,36 @@ export default function Header() {
           }}
         >
           <motion.div 
-            className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl font-bold tracking-tight text-orange-500"
             style={{ 
               transformStyle: "preserve-3d",
               transform: `perspective(1000px) rotateX(${rotateX.get()}deg) rotateY(${rotateY.get()}deg)`,
               transformOrigin: "center center"
             }}
+            whileHover={{
+              transition: { duration: 0.2 }
+            }}
           >
             {/* Shadow layer for depth */}
             <span 
-              className="absolute text-4xl md:text-5xl font-bold tracking-tight text-orange-900/10"
+              className="absolute text-4xl md:text-5xl font-bold tracking-tight text-orange-800/20"
               style={{ 
-                transform: "translateZ(-4px) scale(1.01)",
+                transform: "translateZ(-2px) scale(1.01)",
                 transformOrigin: "center center",
-                filter: "blur(2px)"
+                filter: "blur(1px)"
               }}
             >
               COGNIFORGE AI
             </span>
             
             {/* Base layer */}
-            <span className="relative block">COGNIFORGE AI</span>
+            <span className="relative block bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">COGNIFORGE AI</span>
             
             {/* Highlight layer for 3D effect */}
             <span 
               className="absolute top-0 left-0 text-4xl md:text-5xl font-bold tracking-tight text-white/20"
               style={{ 
-                transform: "translateZ(2px) translateY(-1px) scale(0.99)",
+                transform: "translateZ(1px) translateY(-0.5px) scale(0.99)",
                 transformOrigin: "center center"
               }}
             >
@@ -308,7 +311,7 @@ export default function Header() {
                     style={{ transform: "translateZ(0px)" }}
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.15 }}
                   />
                   
                   <motion.div
@@ -318,7 +321,7 @@ export default function Header() {
                     }}
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 0.7 }}
-                    transition={{ duration: 0.3, delay: 0.1 }}
+                    transition={{ duration: 0.15, delay: 0.05 }}
                   />
                 </div>
                 
