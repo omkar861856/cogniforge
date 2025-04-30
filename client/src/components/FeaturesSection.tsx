@@ -1,37 +1,63 @@
-interface FeatureItem {
+interface ProjectItem {
   title: string;
   description: string;
+  link: string;
+  technologies: string[];
 }
 
-export default function FeaturesSection() {
-  const features: FeatureItem[] = [
+export default function ProjectsSection() {
+  const projects: ProjectItem[] = [
     {
-      title: "Maximum Impact",
-      description: "Large typography commands attention and creates an immediate, powerful impression on your visitors.",
+      title: "AI Gym Membership Website",
+      description: "A sleek, modern website designed to attract and convert gym membership leads with AI-powered user experience.",
+      link: "https://website3.dblfarmops.shop/",
+      technologies: ["React", "TailwindCSS", "Next.js", "AI Integration"]
     },
     {
-      title: "Clear Hierarchy",
-      description: "Oversized text naturally creates visual hierarchy, guiding the user's eye exactly where you want it to go.",
+      title: "Music Label Catalogue",
+      description: "Portfolio website for a music label featuring their artist catalogue, releases, and upcoming events.",
+      link: "https://website3.dblfarmops.shop/",
+      technologies: ["React", "Node.js", "Express", "MongoDB"]
     },
     {
-      title: "Memorable Design",
-      description: "Bold typography creates a lasting impression that visitors will remember long after they've left your site.",
+      title: "Legal Arbitrators Platform",
+      description: "Professional website for legal arbitration services with client portals and case management features.",
+      link: "#",
+      technologies: ["Vue.js", "Firebase", "Tailwind CSS", "Authentication"]
     },
   ];
 
   return (
-    <section id="features" className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
+    <section id="projects" className="py-16 md:py-24 lg:py-32 px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-heading-fluid leading-tight mb-16 md:mb-24">
-          Why go <span className="text-indigo-600">BIG</span>
+          <span className="text-indigo-600">FEATURED</span> PROJECTS
         </h2>
         
-        {features.map((feature, index) => (
-          <div key={index} className="mb-24 md:mb-32">
-            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">{feature.title}</h3>
-            <p className="text-xl md:text-3xl lg:text-4xl text-gray-600 leading-relaxed">
-              {feature.description}
+        {projects.map((project, index) => (
+          <div key={index} className="mb-24 md:mb-32 group">
+            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 group-hover:text-indigo-600 transition-colors duration-300">{project.title}</h3>
+            <p className="text-xl md:text-3xl lg:text-4xl text-gray-600 leading-relaxed mb-6">
+              {project.description}
             </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              {project.technologies.map((tech, techIndex) => (
+                <span key={techIndex} className="text-lg md:text-xl bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-xl md:text-2xl text-indigo-600 font-semibold hover:text-indigo-800 transition-colors inline-flex items-center gap-2"
+            >
+              View Project 
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
           </div>
         ))}
       </div>

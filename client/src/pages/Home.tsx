@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import QuoteSection from "@/components/QuoteSection";
+import ProjectsSection from "@/components/FeaturesSection";
+import AboutSection from "@/components/QuoteSection";
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -12,8 +12,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <QuoteSection />
+        <ProjectsSection />
+        <AboutSection />
         <CTASection />
         <ContactSection />
       </main>
