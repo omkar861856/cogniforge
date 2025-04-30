@@ -106,7 +106,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input 
                           placeholder="Your name" 
-                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 h-auto" 
+                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 h-auto" 
                           {...field} 
                         />
                       </FormControl>
@@ -124,7 +124,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input 
                           placeholder="you@example.com" 
-                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 h-auto" 
+                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 h-auto" 
                           {...field} 
                         />
                       </FormControl>
@@ -141,8 +141,8 @@ export default function ContactSection() {
                       <FormLabel className="block text-xl md:text-2xl font-medium text-gray-700 mb-2">Message</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell me about your project..." 
-                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" 
+                          placeholder="Tell us about your project..." 
+                          className="w-full text-xl md:text-2xl px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
                           rows={4}
                           {...field} 
                         />
@@ -154,7 +154,7 @@ export default function ContactSection() {
                 
                 <Button 
                   type="submit" 
-                  className="text-xl md:text-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105 h-auto w-full"
+                  className="text-xl md:text-2xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105 h-auto w-full"
                 >
                   Send Message
                 </Button>
